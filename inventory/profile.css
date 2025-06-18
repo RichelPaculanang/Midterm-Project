@@ -1,0 +1,55 @@
+body {
+    background-color: #e98a0d; /* light beige background */
+}
+
+.bg-pink {
+    background-color: #c8aa46 !important; /* golden-brown */
+}
+
+.text-pink {
+    color: #a9742d !important; /* medium brown */
+}
+
+.btn-pink {
+    background-color: #d2b48c; /* tan */
+    color: white;
+}
+
+.bg-pink {
+    background-color: #e44910;
+}
+
+.btn-pink:hover {
+    background-color: #da6019; /* darker tan */
+    color: rgb(223, 88, 16);
+}
+
+.btn-outline-pink {
+    border-color: #ce510e;
+    color: #d15310;
+}
+
+.btn-outline-pink:hover {
+    background-color: #a9742d;
+    color: white;
+}
+
+.modal.fade.show {
+    display: block !important;
+    opacity: 1 !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.modal-backdrop {
+    z-index: 1040;
+}
+
+.modal-dialog {
+    z-index: 1050;
+    transform: translateY(0%) scale(1);
+}
+
+/* Remove duplicate .bg-pink and unify to a warm light brown tone */
+.bg-pink {
+    background-color: #deb887; /* burlywood */
+}

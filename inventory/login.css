@@ -1,0 +1,208 @@
+
+:root {
+    --primary-color: #e500ac;
+    --secondary-color: #bb1e79;
+    --bg-color: #b05920;
+    --text-color: #d45c64;
+    --border-color: #d9d9d9;
+    --hover-color: #c65b18;
+    --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.74);
+    --light-color: #ffffff;
+    --input-text-color: #b81c1c;
+
+
+.login-container {
+    width: 100%;
+    max-width: 550px;
+    padding: 20px;
+}
+
+.card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+   
+    border-bottom: none;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.card-body {
+    padding: 40px 30px;
+    background-color: var(--light-color);
+}
+
+.card-title {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.form-label {
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    padding: 14px 15px 14px 50px;
+    border-radius: 1px;
+    border: 1px solid var(--border-color);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: rgba(249, 249, 249, 0.5);
+    color: var(--input-text-color);
+}
+
+/* Style for input text when field is filled */
+.form-control:not(:placeholder-shown) {
+    font-weight: bold;
+}
+
+.form-control::placeholder {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+    background-color: white;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary-color);
+    width: 20px;
+    height: 20px;
+    z-index: 10;
+    stroke-width: 2;
+    transition: all 0.3s ease;
+}
+
+.input-group:hover .input-icon {
+    color: var(--primary-color);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #D4AF37, #8B4513); /* Gold to SaddleBrown */
+    border: none;
+    margin-left: 19%;
+    width: 60%;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(139, 69, 19, 0.3); /* brownish shadow */
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #8B4513, #A0522D); /* SaddleBrown to Sienna */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(139, 69, 19, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(41, 128, 185, 0.3);
+}
+
+.alert {
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feather-icon {
+    vertical-align: middle;
+    stroke-width: 2;
+}
+
+.system-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.invalid-feedback {
+    font-size: 80%;
+    margin-top: 8px;
+    color: #e74c3c;
+    padding-left: 10px;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.password-toggle {
+    background: none;
+    border: none;
+    padding: 0.375rem 0.75rem;
+}
+
+.toggle-icon {
+    color: #fc0808; 
+    transition: color 0.3s ease;
+}
+.toggle-icon:hover {
+    color: #ef08f7; 
+    transition: color 0.3s ease;
+}
+
+
+.toggle-icon-visible {
+    color:#b9171c; ; /* Bootstrap primary blue when visible */
+}
+
+.form-control.is-invalid + .password-toggle .toggle-icon {
+    color: #dc3545; 
+}
+
+.brand-name {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+    color: white;
+}

@@ -1,0 +1,181 @@
+:root {
+    --primary-color: #00B7E5;
+    --secondary-color: #2980b9;
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --border-color: #d9d9d9;
+    --hover-color: #1a5b8c;
+    --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.74);
+    --light-color: #ffffff;
+    --input-text-color: #066cf0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-container {
+    width: 100%;
+    height: 90%;
+    max-width: 550px;
+    padding: 20px;
+}
+
+.card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background: var(--primary-color);
+    color: white;
+    border-bottom: none;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.card-body {
+    padding: 40px 30px;
+    background-color: var(--light-color);
+}
+
+.card-title {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary-color);
+    font-size: 18px;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.input-group:hover .input-icon {
+    color: var(--primary-color);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.form-control {
+    padding: 14px 15px 14px 50px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: rgba(249, 249, 249, 0.5);
+    color: var(--input-text-color);
+}
+
+/* Style for input text when field is filled */
+.form-control:not(:placeholder-shown) {
+    font-weight: bold;
+}
+
+.form-control::placeholder {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+    background-color: white;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    margin-left: 19%;
+    width: 60%;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(41, 128, 185, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--secondary-color), var(--hover-color));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(41, 128, 185, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(41, 128, 185, 0.3);
+}
+
+.invalid-feedback {
+    font-size: 80%;
+    margin-top: 8px;
+    color: #e74c3c;
+    padding-left: 10px;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.password-toggle, .confirm-password-toggle {
+    background: none;
+    border: none;
+    padding: 0.375rem 0.75rem;
+}
+
+.toggle-icon {
+    color: #0835fc; 
+    transition: color 0.3s ease;
+}
+.toggle-icon:hover {
+    color: #08c7f7; 
+    transition: color 0.3s ease;
+}
+.toggle-icon-visible {
+    color: #0d6efd; 
+}
+
+
+.form-control.is-invalid + .password-toggle .toggle-icon,
+.form-control.is-invalid + .confirm-password-toggle .toggle-icon {
+    color: #dc3545; 
+}
